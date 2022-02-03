@@ -1,0 +1,24 @@
+ul {
+  list-style: none;
+  border: 1px solid silver;
+  max-height: 510px;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  /* nice smooth movement */
+  overflow: hidden;
+  /* set to hidden by OP's request */
+  text-align: right;
+  font-size: 2em;
+}
+
+li {
+  padding: .5em;
+  margin: 0;
+}
+
+li:focus {
+  background: LIGHTSALMON;
+  outline: none;
+  font-size: 150%;
+}

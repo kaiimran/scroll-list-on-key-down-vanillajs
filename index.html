@@ -21,6 +21,35 @@
       <li tabIndex="-1">item 14</li>
       <li tabIndex="-1">item 15</li>
     </ul>
+    
+    <script>
+      var listElm = document.querySelector('ul')
+  
+      // Mark first list item
+      listElm.firstElementChild.focus()
+
+      // Event listener
+      window.addEventListener('keydown', onKeyDown)
+
+      // Event callback
+      function onKeyDown(e) {
+        e.preventDefault()
+
+        var selectedElm = document.activeElement,
+          goToStart,
+          // map actions to event's key
+          action = {
+            ArrowUp: "previous",
+            Up: "previous",
+            ArrowDown: "next",
+            Down: "next"
+          }
+
+        selectedElm = selectedElm[action[e.key] + "ElementSibling"];
+
+        selectedElm.focus()
+      }
+    </script>
   </body>
 
 </html>
